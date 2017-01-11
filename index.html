@@ -23,7 +23,7 @@
         <img id="cubes" crossorigin="anonymous" src="https://cdn.aframe.io/360-image-gallery-boilerplate/img/cubes.jpg">
         <img id="sechelt" crossorigin="anonymous" src="https://cdn.aframe.io/360-image-gallery-boilerplate/img/sechelt.jpg">
 
-        <!-- Image link template to be reused. -->
+        <!-- Image link template to be reused -->
         <script id="link" type="text/nunjucks">
           <a-plane class="link" height="1" width="1"
             material="shader: flat; src: {{ thumb }}"
@@ -37,17 +37,17 @@
         </script>
       </a-assets>
 
-      <!-- 360-degree image. -->
+      <!-- 360-degree image -->
       <a-sky id="image-360" radius="10" src="#city"></a-sky>
 
-      <!-- Image links. -->
+      <!-- Image links -->
       <a-entity id="links" layout="type: line; margin: 1.5" position="0 -1 -4">
         <a-entity template="src: #link" data-src="#cubes" data-thumb="#cubes-thumb"></a-entity>
         <a-entity template="src: #link" data-src="#city" data-thumb="#city-thumb"></a-entity>
         <a-entity template="src: #link" data-src="#sechelt" data-thumb="#sechelt-thumb"></a-entity>
       </a-entity>
 
-      <!-- Camera + cursor. -->
+      <!-- Camera + cursor -->
       <a-entity camera look-controls>
         <a-cursor id="cursor"
           animation__click="property: scale; startEvents: click; from: 0.1 0.1 0.1; to: 1 1 1; dur: 150"
